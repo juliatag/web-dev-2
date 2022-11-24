@@ -17,18 +17,23 @@ function App() {
       <DisplayMessage color={color} />
       <Clock />
       <DisplayCounter counter={counter} />
+      <UserActions setColor={setColor} setCount={setCounter} counter={counter} color={color} />
+    </div>
+  );
+}
 
-      <div className="text-center">
-        <button
-          className="btn "
-          onClick={() => {
-            setColor(toggle(color));
-            setCounter(counter + 1);
-          }}
-        >
-          Click me React
-        </button>
-      </div>
+function UserActions(props) {
+  return (
+    <div className="text-center">
+      <button
+        className="btn"
+        onClick={() => {
+          props.setColor(toggle(props.color));
+          props.setCount(props.count + 1);
+        }}
+      >
+        Click me React
+      </button>
     </div>
   );
 }
