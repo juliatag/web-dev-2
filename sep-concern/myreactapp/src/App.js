@@ -22,6 +22,42 @@ function App() {
   );
 }
 
+/*****************************  App Components *********************************************/
+
+//for the message
+function DisplayMessage(props) {
+  return (
+    <h1 className="text-center" style={{ color: props.color }}>
+      React with State and LocalStorage
+    </h1>
+  );
+}
+
+function Clock() {
+  const [time, setTime] = React.useState(new Date().toLocaleTimeString());
+  React.useEffect(() => {
+    const interval = setInterval(() => setTime(new Date().toLocaleTimeString()), 1000);
+    return () => {
+      clearInterval(interval);
+    };
+  }, [time]);
+
+  return (
+    <p className="text-center">
+      React Clock: <span className="bold">{time}</span>
+    </p>
+  );
+}
+
+//for the message
+function DisplayCounter(props) {
+  return (
+    <p className="text-center bold">
+      Title Color changed <span className="count">{props.counter}</span> times
+    </p>
+  );
+}
+
 function UserActions(props) {
   return (
     <div className="text-center">
@@ -45,48 +81,4 @@ function toggle(color) {
     return "rgb(183, 28, 200)";
   }
 }
-
-//for the message
-function DisplayMessage(props) {
-  return (
-    <h1 className="text-center" style={{ color: props.color }}>
-      React with State and LocalStorage
-    </h1>
-  );
-}
-
-//using class component for counter just to test
-//Using Component or PureComponent ? : https://stackoverflow.com/questions/41340697/react-component-vs-react-purecomponent
-function Clock() {
-  const [time, setTime] = React.useState(new Date().toLocaleTimeString());
-  React.useEffect(() => {
-    const interval = setInterval(() => setTime(new Date().toLocaleTimeString()), 1000);
-    return () => {
-      clearInterval(interval);
-    };
-  }, [time]);
-
-  return (
-    <p className="text-center">
-      React Clock: <span className="bold">{time}</span>
-    </p>
-  );
-}
-
-//for the message
-function DisplayCounter(props) {
-  return (
-    <p className="text-center bold">
-      Title Colour changed <span className="count">{props.counter}</span> times
-    </p>
-  );
-}
-
-/*********************************** MAIN ************************************/
-//using one parent component
-
-// const root = ReactDOM.createRoot(document.getElementById("root"));
-// root.render(<Main />); // first load
-// setInterval(() => root.render(<Main />), 1000);
-
 export default App;
