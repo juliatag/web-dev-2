@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
+
+/*****************************  Main App Component *********************************************/
 
 function App() {
   /* Destructuring */
-  const [color, setColor] = React.useState(JSON.parse(sessionStorage.getItem("color")) || "rgb(183, 28, 200)");
-  const [counter, setCounter] = React.useState(JSON.parse(localStorage.getItem("counter")) || 0);
+  const [color, setColor] = useState(JSON.parse(sessionStorage.getItem("color")) || "rgb(183, 28, 200)");
+  const [counter, setCounter] = useState(JSON.parse(localStorage.getItem("counter")) || 0);
 
-  React.useEffect(() => {
+  useEffect(() => {
     sessionStorage.setItem("color", JSON.stringify(color));
     localStorage.setItem("counter", JSON.stringify(counter));
   }, [color, counter]);
@@ -24,7 +26,7 @@ function App() {
 
 /*****************************  App Components *********************************************/
 
-//for the message
+//title
 function DisplayMessage(props) {
   return (
     <h1 className="text-center" style={{ color: props.color }}>
@@ -33,9 +35,10 @@ function DisplayMessage(props) {
   );
 }
 
+//clock
 function Clock() {
-  const [time, setTime] = React.useState(new Date().toLocaleTimeString());
-  React.useEffect(() => {
+  const [time, setTime] = useState(new Date().toLocaleTimeString());
+  useEffect(() => {
     const interval = setInterval(() => setTime(new Date().toLocaleTimeString()), 1000);
     return () => {
       clearInterval(interval);
@@ -49,7 +52,7 @@ function Clock() {
   );
 }
 
-//for the message
+//counter
 function DisplayCounter(props) {
   return (
     <p className="text-center bold">
@@ -58,6 +61,7 @@ function DisplayCounter(props) {
   );
 }
 
+//the button
 function UserActions(props) {
   return (
     <div className="text-center">
@@ -74,6 +78,7 @@ function UserActions(props) {
   );
 }
 
+//logic helper for button
 function toggle(color) {
   if (color === "rgb(183, 28, 200)") {
     return "rgb(9, 146, 146";
