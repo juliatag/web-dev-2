@@ -19,7 +19,7 @@ function App() {
       <DisplayMessage color={color} />
       <Clock />
       <DisplayCounter counter={counter} />
-      <UserActions setColor={setColor} setCount={setCounter} counter={counter} color={color} />
+      <UserActions setColor={setColor} setCounter={setCounter} counter={counter} color={color} />
     </div>
   );
 }
@@ -63,27 +63,26 @@ function DisplayCounter(props) {
 
 //the button
 function UserActions(props) {
+  //logic helper for button
+  function toggle(color) {
+    const green = "rgb(183, 28, 200)";
+    const pink = "rgb(9, 146, 146";
+    const blue = "rgb(9, 0, 146";
+    return color === blue ? pink : color === pink ? green : blue;
+  }
+
+  const handleOnClick = () => {
+    props.setColor(toggle(props.color));
+    props.setCounter(props.counter + 1);
+  };
+
   return (
     <div className="text-center">
-      <button
-        className="btn"
-        onClick={() => {
-          props.setColor(toggle(props.color));
-          props.setCount(props.count + 1);
-        }}
-      >
-        Click me React
+      <button className="btn" onClick={handleOnClick}>
+        Change Title Color
       </button>
     </div>
   );
 }
 
-//logic helper for button
-function toggle(color) {
-  if (color === "rgb(183, 28, 200)") {
-    return "rgb(9, 146, 146";
-  } else {
-    return "rgb(183, 28, 200)";
-  }
-}
 export default App;
