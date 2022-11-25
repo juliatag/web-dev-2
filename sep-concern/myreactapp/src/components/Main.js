@@ -15,13 +15,13 @@ function Main() {
   }, [color, counter]);
 
   return (
-    <div className="main">
+    <>
       {/* This component has two children that display a message and a clock */}
       <DisplayMessage color={color} />
       <Clock />
       <DisplayCounter counter={counter} />
       <UserActions setColor={setColor} setCounter={setCounter} counter={counter} color={color} />
-    </div>
+    </>
   );
 }
 export default Main;

@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import MainLayout from "./layouts/MainLayout";
+import Page404 from "./pages/Page404";
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
-          <Route path="*" element={<h1 className="text-center">404 Page Not Found</h1>} />
+          <Route path="*" element={<Page404 />} />
         </Route>
       </Routes>
 
