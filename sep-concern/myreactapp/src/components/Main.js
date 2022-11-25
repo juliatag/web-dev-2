@@ -15,7 +15,7 @@ function Main() {
   }, [color, counter]);
 
   return (
-    <div className="container">
+    <div className="main">
       {/* This component has two children that display a message and a clock */}
       <DisplayMessage color={color} />
       <Clock />
