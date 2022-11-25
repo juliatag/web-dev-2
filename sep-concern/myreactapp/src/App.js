@@ -13,6 +13,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="*" element={<h1 className="text-center">404 Page Not Found</h1>} />
         </Route>
       </Routes>
 
