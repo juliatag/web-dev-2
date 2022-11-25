@@ -5,6 +5,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import MainLayout from "./layouts/MainLayout";
 import Page404 from "./pages/Page404";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (

@@ -14,7 +14,7 @@ function UserActions(props) {
 
   return (
     <div className="text-center">
-      <button className="btn" onClick={handleOnClick}>
+      <button className="btn btn-primary" onClick={handleOnClick}>
         Change Title Color
       </button>
     </div>

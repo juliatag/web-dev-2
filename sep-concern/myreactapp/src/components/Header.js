@@ -12,6 +12,17 @@ function Header() {
     cursor: "pointer",
   };
 
+  // skip this and straight to Bootstrap as per teacher request
+
+  // const activeButtonStyle = {
+  //   backgroundColor: "rgb(183, 28, 200)",
+  //   border: "none",
+  //   color: "white",
+  //   padding: "12px",
+  //   flexShrink: "0",
+  //   cursor: "pointer",
+  // };
+
   return (
     <div className="header">
       <div className="nav">

@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import Button from "react-bootstrap/Button";
 
 function HomeButton() {
   const navigate = useNavigate();
@@ -11,9 +12,10 @@ function HomeButton() {
   };
   return (
     <div>
-      <button className="btn" onClick={handleSubmit}>
-        Home
-      </button>
+      <Button variant="primary" onClick={handleSubmit}>
+        {" "}
+        Bootstrap Button
+      </Button>
     </div>
   );
 }
