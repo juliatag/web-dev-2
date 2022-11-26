@@ -1,6 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import HomeButton from "./HomeButton";
 import "./Header.css";
+import Logo from "./Logo";
 
 function Header() {
   const buttonStyle = {
@@ -25,6 +26,9 @@ function Header() {
 
   return (
     <div className="header">
+      <div className="logo">
+        <Logo />
+      </div>
       <div className="nav">
         <NavLink className={({ isActive }) => (isActive ? "link-active" : "link-inactive")} to="/">
           Home
@@ -38,11 +42,6 @@ function Header() {
           Contact
         </NavLink>
       </div>
-      <NavLink style={buttonStyle} to="/">
-        const style
-      </NavLink>
-
-      <div className="links"></div>
 
       <HomeButton />
     </div>

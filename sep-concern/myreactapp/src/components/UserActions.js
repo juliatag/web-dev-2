@@ -1,3 +1,5 @@
+import Button from "@mui/material/Button";
+
 function UserActions(props) {
   //logic helper for button
   function toggle(color) {
@@ -14,9 +16,9 @@ function UserActions(props) {
 
   return (
     <div className="text-center">
-      <button className="btn btn-primary" onClick={handleOnClick}>
-        Change Title Color
-      </button>
+      <Button color="secondary" variant="contained" onClick={handleOnClick}>
+        Change Color
+      </Button>
     </div>
   );
 }

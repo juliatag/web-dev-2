@@ -42,12 +42,27 @@ h1 {
 .main {
    display: flex;
    flex-direction: column;
+   max-width: 500px;
+   margin:0 auto;
    gap: 10px; 
 }
+
+.main .logo{
+text-align: center;
+ }
+ .main .logo img {
+    max-width: 300px;
+ }
 
 /* utilities */
 .text-center {
     text-align: center;
+}
+.text-left {
+    text-align: left;
+}
+.text-right {
+    text-align: right;
 }
 
 .btn {

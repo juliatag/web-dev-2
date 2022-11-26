@@ -3,6 +3,7 @@ import DisplayMessage from "./DisplayMessage";
 import DisplayCounter from "./DisplayCounter";
 import Clock from "./Clock";
 import UserActions from "./UserActions";
+import Logo from "./Logo";
 
 function Main() {
   /* Destructuring */
@@ -17,6 +18,7 @@ function Main() {
   return (
     <>
       {/* This component has two children that display a message and a clock */}
+      <Logo />
       <DisplayMessage color={color} />
       <Clock />
       <DisplayCounter counter={counter} />

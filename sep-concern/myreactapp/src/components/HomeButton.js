@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import Button from "react-bootstrap/Button";
+// import Button from "react-bootstrap/Button";
+import Button from "@mui/material/Button";
 
 function HomeButton() {
   const navigate = useNavigate();
@@ -11,12 +12,9 @@ function HomeButton() {
     }
   };
   return (
-    <div>
-      <Button variant="primary" onClick={handleSubmit}>
-        {" "}
-        Bootstrap Button
-      </Button>
-    </div>
+    <Button color="secondary" variant="contained" className="mx-2" onClick={handleSubmit}>
+      Main App
+    </Button>
   );
 }
 export default HomeButton;
