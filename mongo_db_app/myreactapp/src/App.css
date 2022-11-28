@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@300&display=swap');
+
+:root {
+    --pink: rgb(183, 28, 200);
+    --turquoise:  rgb(9, 146, 146);
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    color: var(--pink);
+    font-family: 'Lobster', cursive;
+    font-size: 60px;
+    font-weight: 500;
+}
+/* header */
+/* go to Header.css */
+
+/* footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+}
+
+/* LayoutMain */
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Home page */
+
+.main {
+   display: flex;
+   flex-direction: column;
+   max-width: 500px;
+   margin:0 auto;
+   gap: 10px; 
+}
+
+.main .logo{
+text-align: center;
+ }
+ .main .logo img {
+    max-width: 300px;
+ }
+
+/* utilities */
+.text-center {
+    text-align: center;
+}
+.text-left {
+    text-align: left;
+}
+.text-right {
+    text-align: right;
+}
+
+.btn {
+    padding: 12px;
+    background-color: var(--turquoise);
+    border: none;
+    color: #fff;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: all 0.5;
+    border-radius: 5px;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.count {
+    font-weight: 700;
+    padding: 5px;
+    border-radius: 50%;
+    margin: 3px;
+    background-color: var(--pink);
+    color: #fff;
+}
+
+.bold {
+    font-weight: 700;
+}
