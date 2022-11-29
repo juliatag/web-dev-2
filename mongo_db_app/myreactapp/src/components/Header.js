@@ -34,6 +34,22 @@ function Header() {
           Home
         </NavLink>
 
+        <NavLink className={({ isActive }) => (isActive ? "link-active" : "link-inactive")} to="/signin">
+          Signin
+        </NavLink>
+
+        <NavLink className={({ isActive }) => (isActive ? "link-active" : "link-inactive")} to="/signup">
+          Signup
+        </NavLink>
+
+        <NavLink className={({ isActive }) => (isActive ? "link-active" : "link-inactive")} to="/crud">
+          CRUD
+        </NavLink>
+
+        <NavLink className={({ isActive }) => (isActive ? "link-active" : "link-inactive")} to="/counter">
+          Counter
+        </NavLink>
+
         <NavLink className={({ isActive }) => (isActive ? "link-active" : "link-inactive")} to="/about">
           About
         </NavLink>

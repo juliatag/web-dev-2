@@ -1,10 +1,8 @@
 import React from "react";
+import Button from "./button";
+
 function DbDataGetOneParam() {
-  return (
-    <>
-      <button onClick={callGetQuery}>Get one user using params</button>
-    </>
-  );
+  return <Button event={callGetQuery} title={"Get user (by username param)"} />;
 }
 export default DbDataGetOneParam;
 

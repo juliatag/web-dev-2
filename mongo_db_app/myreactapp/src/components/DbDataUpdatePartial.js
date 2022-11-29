@@ -1,10 +1,8 @@
 import React from "react";
+import Button from "./button";
+
 function DbDataUpdatePartial() {
-  return (
-    <>
-      <button onClick={callPatchBodyUsername}>Update Partial</button>
-    </>
-  );
+  return <Button event={callPatchBodyUsername} title={"update user password (patch password only)"} />;
 }
 export default DbDataUpdatePartial;
 

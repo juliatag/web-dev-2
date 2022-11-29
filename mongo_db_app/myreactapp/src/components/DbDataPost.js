@@ -1,10 +1,8 @@
 import React from "react";
+import Button from "./button";
+
 function DbDataPost() {
-  return (
-    <>
-      <button onClick={callPostBody}>Create user</button>
-    </>
-  );
+  return <Button event={callPostBody} title={"Create new user"} />;
 }
 export default DbDataPost;
 

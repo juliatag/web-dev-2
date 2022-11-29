@@ -1,10 +1,8 @@
 import React from "react";
+import Button from "./button";
+
 function DbDataGetAll() {
-  return (
-    <>
-      <button onClick={callGetAll}>Get all users</button>
-    </>
-  );
+  return <Button event={callGetAll} title={"Get all users"} />;
 }
 export default DbDataGetAll;
 

@@ -1,10 +1,8 @@
 import React from "react";
+import Button from "./button";
+
 function DbDataUpdateFull() {
-  return (
-    <>
-      <button onClick={callPutBody}>Update Full</button>
-    </>
-  );
+  return <Button event={callPutBody} title={"Update user (put and body)"} />;
 }
 export default DbDataUpdateFull;
 

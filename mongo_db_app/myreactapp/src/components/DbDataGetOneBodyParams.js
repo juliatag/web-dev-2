@@ -1,10 +1,8 @@
 import React from "react";
+import Button from "./button";
+
 function DbDataGetOneBodyParams() {
-  return (
-    <>
-      <button onClick={callGetBody}>Get one user using Body params</button>
-    </>
-  );
+  return <Button event={callGetBody} title={"Update user (body param)"} />;
 }
 export default DbDataGetOneBodyParams;
 

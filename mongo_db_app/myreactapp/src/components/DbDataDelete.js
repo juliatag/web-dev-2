@@ -1,10 +1,8 @@
 import React from "react";
+import Button from "./button";
+
 function DbDataDelete() {
-  return (
-    <>
-      <button onClick={callDeleteParams}>Delete user</button>
-    </>
-  );
+  return <Button event={callDeleteParams} title={"Delete user"} />;
 }
 export default DbDataDelete;
 
