@@ -1,5 +1,4 @@
 import { Link, NavLink } from "react-router-dom";
-import HomeButton from "../HomeButton";
 import "./Header.css";
 import Logo from "./Logo";
 import React from "react";
