@@ -1,9 +1,10 @@
-import Register from "../components/Register";
+import RegisterForm from "../components/forms/RegisterForm";
 
 function Signup() {
   return (
     <>
-      <Register />
+      <h1 className="text-center">Signup</h1>
+      <RegisterForm />
     </>
   );
 }

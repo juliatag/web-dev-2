@@ -1,6 +1,11 @@
-import Login from "../components/Login";
+import LoginForm from "../components/forms/LoginForm";
 
 function Signin() {
-  return <Login />;
+  return (
+    <>
+      <h1 className="text-center">Login</h1>
+      <LoginForm />
+    </>
+  );
 }
 export default Signin;

@@ -1,11 +1,11 @@
-import DbDataGetAll from "../components/DbDataGetAll";
-import DbDataPost from "../components/DbDataPost";
-import DbDataGetOneParam from "../components/DbDataGetOneParam";
-import DbDataGetOnePath from "../components/DbDataGetOnePath";
-import DbDataGetOneBodyParams from "../components/DbDataGetOneBodyParams";
-import DbDataUpdateFull from "../components/DbDataUpdateFull";
-import DbDataUpdatePartial from "../components/DbDataUpdatePartial";
-import DbDataDelete from "../components/DbDataDelete";
+import DbDataGetAll from "../components/database/DbDataGetAll";
+import DbDataPost from "../components/database/DbDataPost";
+import DbDataGetOneParam from "../components/database/DbDataGetOneParam";
+import DbDataGetOnePath from "../components/database/DbDataGetOnePath";
+import DbDataGetOneBodyParams from "../components/database/DbDataGetOneBodyParams";
+import DbDataUpdateFull from "../components/database/DbDataUpdateFull";
+import DbDataUpdatePartial from "../components/database/DbDataUpdatePartial";
+import DbDataDelete from "../components/database/DbDataDelete";
 
 function CRUD() {
   return (

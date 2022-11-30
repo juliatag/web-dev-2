@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "./button";
+import Button from "../button";
 
 function DbDataUpdateFull() {
   return <Button event={callPutBody} title={"Update user (put and body)"} />;

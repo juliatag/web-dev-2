@@ -11,6 +11,7 @@ import Counter from "./pages/Counter";
 import Signin from "./pages/Signin";
 import Signup from "./pages/Signup";
 import CRUD from "./pages/CRUD";
+import React, { useState } from "react";
 
 //changing MUI default colors
 const theme = createTheme({
@@ -21,21 +22,31 @@ const theme = createTheme({
 });
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const loggedInValueToProvider = [isLoggedIn, setIsLoggedIn]; // So we can pass
+
   return (
-    <ThemeProvider theme={theme}>
-      <Routes>
-        <Route path="/" element={<MainLayout />}>
-          <Route index element={<Home />} />
-          <Route path="signin" element={<Signin />} />
-          <Route path="signup" element={<Signup />} />
-          <Route path="crud" element={<CRUD />} />
-          <Route path="counter" element={<Counter />} />
-          <Route path="about" element={<About />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="*" element={<Page404 />} />
-        </Route>
-      </Routes>
-    </ThemeProvider>
+    <LoggedInContext.Provider value={loggedInValueToProvider}>
+      <ThemeProvider theme={theme}>
+        <Routes>
+          <Route path="/" element={<MainLayout />}>
+            <Route index element={isLoggedIn ? <Home /> : <Signin />} />
+            <Route path="signin" element={<Signin />} />
+            <Route path="signup" element={<Signup />} />
+            <Route path="crud" element={<CRUD />} />
+            <Route path="counter" element={<Counter />} />
+            <Route path="about" element={<About />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="*" element={<Page404 />} />
+          </Route>
+        </Routes>
+      </ThemeProvider>
+    </LoggedInContext.Provider>
   );
 }
 export default App;
+
+export const LoggedInContext = React.createContext({
+  isLoggedIn: false,
+  setIsLoggedIn: () => {},
+});

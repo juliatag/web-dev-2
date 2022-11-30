@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "./button";
+import Button from "../button";
 
 function DbDataGetOnePath() {
   return <Button event={callGetParams} title={"Get user (by username path param)"} />;

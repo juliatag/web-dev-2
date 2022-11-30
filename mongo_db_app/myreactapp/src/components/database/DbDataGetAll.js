@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "./button";
+import Button from "../button";
 
 function DbDataGetAll() {
   return <Button event={callGetAll} title={"Get all users"} />;

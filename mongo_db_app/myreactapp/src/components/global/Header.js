@@ -1,9 +1,16 @@
 import { Link, NavLink } from "react-router-dom";
-import HomeButton from "./HomeButton";
+import HomeButton from "../HomeButton";
 import "./Header.css";
-import Logo from "./Logo";
+import Logo from "../Logo";
+import React from "react";
+import { LoggedInContext } from "../../App";
+import LogoutButton from "../LogoutButton";
+import SignupButton from "../SignupButton";
+import SigninButton from "../SigninButton";
 
 function Header() {
+  const [isLoggedIn, setIsLoggedIn] = React.useContext(LoggedInContext);
+
   const buttonStyle = {
     backgroundColor: "rgb(183, 28, 200)",
     border: "none",
@@ -29,6 +36,7 @@ function Header() {
       <div className="logo">
         <Logo />
       </div>
+
       <div className="nav">
         <NavLink className={({ isActive }) => (isActive ? "link-active" : "link-inactive")} to="/">
           Home
@@ -58,8 +66,15 @@ function Header() {
           Contact
         </NavLink>
       </div>
-
-      <HomeButton />
+      <div>
+        {isLoggedIn ? (
+          <LogoutButton />
+        ) : (
+          <>
+            <SigninButton /> <SignupButton />
+          </>
+        )}
+      </div>
     </div>
   );
 }
