@@ -9,7 +9,7 @@ function LogoutButton() {
 
   const logout = () => {
     setIsLoggedIn(false);
-    //navigate("/");
+    navigate("/");
   };
 
   return <Button event={logout} title={"Logout"} />;

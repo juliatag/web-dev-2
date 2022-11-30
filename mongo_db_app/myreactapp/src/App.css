@@ -60,6 +60,15 @@ text-align: center;
     flex-direction: column;
     gap: 10px;
  }
+ form label {
+font-size: 10px;
+margin-bottom: -5px;
+ }    
+form input {
+border: 1px solid rgb(144, 144, 144);
+border-radius: 10px;
+min-height: 20px;
+ }
 
 /* utilities */
 .text-center {
