@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../button";
+import Button from "../global/button";
 
 function DbDataGetOneParam() {
   return <Button event={callGetQuery} title={"Get user (by username param)"} />;

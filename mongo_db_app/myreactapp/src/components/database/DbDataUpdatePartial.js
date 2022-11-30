@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../button";
+import Button from "../global/button";
 
 function DbDataUpdatePartial() {
   return <Button event={callPatchBodyUsername} title={"update user password (patch password only)"} />;

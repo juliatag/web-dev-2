@@ -1,4 +1,4 @@
-import Button from "./button";
+import Button from "../global/button";
 
 function Register() {
   return <Button event={registerUserTemp} title={"Register"} />;

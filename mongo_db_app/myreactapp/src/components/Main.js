@@ -3,7 +3,7 @@ import DisplayMessage from "./DisplayMessage";
 import DisplayCounter from "./DisplayCounter";
 import Clock from "./Clock";
 import UserActions from "./UserActions";
-import Logo from "./Logo";
+import Logo from "./global/Logo";
 
 function Main() {
   /* Destructuring */

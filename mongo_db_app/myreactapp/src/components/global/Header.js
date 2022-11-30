@@ -1,12 +1,12 @@
 import { Link, NavLink } from "react-router-dom";
 import HomeButton from "../HomeButton";
 import "./Header.css";
-import Logo from "../Logo";
+import Logo from "./Logo";
 import React from "react";
 import { LoggedInContext } from "../../App";
-import LogoutButton from "../LogoutButton";
-import SignupButton from "../SignupButton";
-import SigninButton from "../SigninButton";
+import LogoutButton from "./LogoutButton";
+import SignupButton from "./SignupButton";
+import SigninButton from "./SigninButton";
 
 function Header() {
   const [isLoggedIn, setIsLoggedIn] = React.useContext(LoggedInContext);

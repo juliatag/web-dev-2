@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../button";
+import Button from "../global/button";
 
 function DbDataPost() {
   return <Button event={callPostBody} title={"Create new user"} />;

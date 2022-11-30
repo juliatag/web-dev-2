@@ -1,4 +1,4 @@
-import Img from "../img/logo.svg";
+import Img from "../../img/logo.svg";
 function Logo() {
   return (
     <div className="logo">

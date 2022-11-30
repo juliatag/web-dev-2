@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../button";
+import Button from "../global/button";
 
 function DbDataGetOneBodyParams() {
   return <Button event={callGetBody} title={"Update user (body param)"} />;
